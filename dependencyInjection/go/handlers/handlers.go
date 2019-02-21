@@ -15,7 +15,7 @@ func NewResponseHandler(db database.Database) ResponseHandler {
 
 //show login/registration form index file, maybe won't be needed
 func (r *ResponseHandler) IndexEndpoint(c *gin.Context) {
-	r.database.GetUser()
+	r.database.GetUser(c.Param("user"))
 	c.JSON(200, gin.H{
 		"message": "pong",
 	})

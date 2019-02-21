@@ -16,5 +16,5 @@ func (d *MockDatabase) GetUser(user string) string {
 		}
 	}
 
-	return ""
+	return "mock user"
 }
